@@ -3,7 +3,12 @@ import reset from 'styled-reset';
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
-  @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap')
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
 
   * {     
     box-sizing: border-box;
@@ -11,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: "Gothic A1", sans-serif;
+    font-family: 'Pretendard-Regular';
   }
 
   input {
