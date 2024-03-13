@@ -1,0 +1,17 @@
+
+.hotelitem {
+    margin-left: 20%;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+.hotelimage {
+    width:25vw;
+    height:30vh
+}
+
+.hotelinfo {
+    margin-left: 5%;
+    width:60vw;
+    height:30vh
+}
