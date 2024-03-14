@@ -3,6 +3,7 @@ import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
+  
   @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -33,9 +34,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
    button {
-    // border-style: none;
+    border-style: none;
     cursor: pointer;
-   }
-`;
+
+  }`
+;
+
 
 export default GlobalStyles;
