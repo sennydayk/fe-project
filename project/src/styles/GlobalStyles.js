@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-const GlobalStyles = createGlobalStyle
+const GlobalStyles = createGlobalStyle`
   ${reset}
   
   @font-face {
@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle
   button {
     border-style: none;
     cursor: pointer;
-  }
+  }`
 ;
 
 export default GlobalStyles;
