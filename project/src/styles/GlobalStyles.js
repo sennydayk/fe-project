@@ -33,10 +33,12 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  button {
+   button {
     border-style: none;
     cursor: pointer;
+
   }`
 ;
+
 
 export default GlobalStyles;
