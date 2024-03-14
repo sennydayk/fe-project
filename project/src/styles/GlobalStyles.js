@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
@@ -32,10 +32,10 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  button {
-    border-style: none;
+   button {
+    // border-style: none;
     cursor: pointer;
-  }
+   }
 `;
 
 export default GlobalStyles;
