@@ -12,7 +12,7 @@ export const HeaderStyle = styled.div`
 export const HeaderIocn = styled.div`
   display: flex;
   align-items: center;
-  border: 2px solid pointBoxColor:;
+  border: 2px solid pointBoxColor;
   border-radius: 28px;
   padding: 0 10px 0 10px;
   margin: 18px 20px 22px 20px;
