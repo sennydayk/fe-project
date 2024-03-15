@@ -16,6 +16,7 @@ import Incheon from "../assets/인천.webp";
 import Yeosoo from "../assets/여수.webp";
 import Gyeongju from "../assets/경주.webp";
 import Seoul from "../assets/서울.webp";
+import { useNavigate } from "react-router-dom";
 
 const ImageList = styled.div``;
 
@@ -82,6 +83,7 @@ export const Arrow = styled.p`
 `;
 
 function DomesticSlider() {
+  const navigate = useNavigate();
   const settings = {
     dots: false,
     infinite: false,
@@ -91,46 +93,51 @@ function DomesticSlider() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
+  const handleCityClick = (city) => {
+    navigate(`/detail?query=${encodeURIComponent(city)}`);
+  };
+
   return (
     <div className="slider-container" style={{ position: "relative" }}>
       <Slider {...settings} className="slider">
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("부산")}>
           <img src={Busan} alt="부산" />
           <CityName>부산</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("가평")}>
           <img src={Gapyeong} alt="가평" />
           <CityName>가평</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("해운대")}>
           <img src={Haewoondae} alt="해운대" />
           <CityName>해운대</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("경주")}>
           <img src={Gyeongju} alt="경주" />
           <CityName>경주</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("속초")}>
           <img src={Sokcho} alt="속초" />
           <CityName>속초</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("여수")}>
           <img src={Yeosoo} alt="여수" />
           <CityName>여수</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("인천")}>
           <img src={Incheon} alt="인천" />
           <CityName>인천</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("강릉")}>
           <img src={Kangreung} alt="강릉" />
           <CityName>강릉</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("제주")}>
           <img src={Jeju} alt="제주" />
           <CityName>제주</CityName>
         </ImageList>
-        <ImageList>
+        <ImageList onClick={() => handleCityClick("서울")}>
           <img src={Seoul} alt="서울" />
           <CityName>서울</CityName>
         </ImageList>

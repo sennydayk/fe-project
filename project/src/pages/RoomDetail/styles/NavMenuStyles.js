@@ -6,6 +6,7 @@ export const Nav = styled.nav`
   background: ${(props) => props.theme.white};
   position: ${(props) => props.isFixed ? 'fixed' : 'relative'};
   top: ${(props) => props.isFixed ? '0' : 'auto'};
+  display:${(props) => props.isFixed ? 'block' : 'none'};
   left: 0;
   z-index: 10;
   `;
@@ -33,9 +34,11 @@ export const NavList = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 5px solid ${(props) => (props.isClicked ? props.theme.blue : "transparent")};
+  font-weight: ${(props) => (props.isClicked ? "bold" : "normal")};
 
   a {
-    color: black;
+    color: ${(props) => (props.isClicked ? props.theme.blue : props.theme.black)};
     text-decoration: none;
     transition: color 0.3s ease;
   }

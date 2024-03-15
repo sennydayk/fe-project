@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Calendar from "./Calendar";
 import Options from "./Options";
@@ -30,7 +30,7 @@ const SearchBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: atuo;
+  height: auto;
   z-index: 1;
 `;
 
@@ -114,6 +114,13 @@ const Button = styled.button`
 function MainVisual() {
   const [searchTerm, setSearchTerm] = useState(""); // 검색창 입력 값을 관리할 상태
   const navigate = useNavigate(); // 페이지 이동을 위한 navigate 함수
+  const [searchParams] = useSearchParams(); // 쿼리 매개변수를 가져오는 훅
+
+  // 컴포넌트가 마운트될 때 쿼리 문자열에서 검색어를 가져와 상태를 업데이트합니다.
+  React.useEffect(() => {
+    const term = searchParams.get("searchTerm") || "";
+    setSearchTerm(term);
+  }, [searchParams]);
 
   const handleSearch = () => {
     // 검색 실행 함수
@@ -125,6 +132,7 @@ function MainVisual() {
   const handleButtonClick2 = (buttonIndex) => {
     setActiveButton2(buttonIndex);
   };
+
   return (
     <Container>
       <MainImage src={mainImage} alt="메인" />
