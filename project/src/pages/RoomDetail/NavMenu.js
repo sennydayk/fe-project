@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import * as S from './styles/NavMenuStyles';
 import PrimaryBtn from '../../components/Button/PrimaryBtn';
 
+
 const NavMenu = () => {
-  const navListItems = [
+  const navListItems = useMemo(() => [
     { id: 'overview', title: '개요' },
     { id: 'facilities', title: '서비스 및 부대시설' },
     { id: 'rooms', title: '객실' },
     { id: 'location', title: '위치' },
     { id: 'reviews', title: '리뷰' }
-  ];
+  ], []);
 
   const [isFixed, setIsFixed] = useState(false);
   const [activeMenu, setActiveMenu] = useState('overview');

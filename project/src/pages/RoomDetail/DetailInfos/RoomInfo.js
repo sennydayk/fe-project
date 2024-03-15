@@ -27,7 +27,7 @@ const RoomInfo = () => {
       <section>
         <SectionHeader sectionTitle="숙소 이용 정보" />
         <S.RoomUsageWrap>
-          <div className='title'>공지사항</div>
+          <div className='sub_title'>공지사항</div>
           <ul>
             <li>
               당 호텔은 일회용 플라스틱 사용으로 인해 고통받는 지구를 살리고자 적극적인 지구 살리기 캠페인 진행
@@ -38,7 +38,7 @@ const RoomInfo = () => {
           </ul>
         </S.RoomUsageWrap>
         <S.RoomUsageWrap>
-          <div className='title'>기본정보</div>
+          <div className='sub_title'>기본정보</div>
           <ul>
             <li>
               체크인: 16:00 | 체크아웃: 11:00
@@ -61,7 +61,7 @@ const RoomInfo = () => {
           </ul>
         </S.RoomUsageWrap>
         <S.RoomUsageWrap>
-          <div className='title'>부대시설 정보</div>
+          <div className='sub_title'>부대시설 정보</div>
           <ul>
             <li>
               와인앤다인 (레스토랑) / 1층 / 런치 11:30~15:00, 디너 17:00~21:00
