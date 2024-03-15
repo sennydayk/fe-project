@@ -29,7 +29,7 @@ export const RoomUsageWrap = styled.div`
     padding-top: 16px;
     padding-bottom: 8px;
 
-  .title {
+  .sub_title {
     text-align: start;
     font-weight: 700;
     margin-bottom: 12px;
