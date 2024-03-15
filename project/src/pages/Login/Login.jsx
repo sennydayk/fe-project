@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import styled from "styled-components;";
-import "./sign.css";
+import "./Login.css";
+import { Link } from "react-router-dom";
 
 const User = {
   email: "test@example.com",
@@ -98,9 +99,10 @@ export default function Login() {
         >
           로그인
         </button>
-
-        <button className="memderButton"></button>
       </div>
+      <button className="memderButton">
+        <Link to="/signup">회원가입</Link>
+      </button>
       ;
     </div>
   );

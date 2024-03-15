@@ -1,8 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
 
-import React, { useEffect } from "react";
-
-import { createStore } from "redux";
 const SERVICE_KEY = process.env.REACT_APP_SERVICE_KEY;
 
 export const FETCH_DATA_REQUEST = "FETCH_DATA_REQUEST";

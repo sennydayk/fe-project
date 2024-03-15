@@ -56,12 +56,17 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSignup}>
-        <h1>필수 정보 입력</h1>
-        <h2>가입을 위해 필수 정보를 입력해 주세요</h2>
+        <h1 className="infomation">필수 정보 입력</h1>
+        <h2 className="info">가입을 위해 필수 정보를 입력해 주세요</h2>
 
         <div>
-          <label htmlFor="email">이메일</label>
+          <label className="email" htmlFor="email">
+            이메일
+          </label>
+        </div>
+        <div>
           <input
+            className="emailput"
             type="email"
             id="email"
             value={email}
@@ -69,8 +74,13 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="username">이름</label>
+          <label className="username" htmlFor="username">
+            이름
+          </label>
+        </div>
+        <div>
           <input
+            className="nameput"
             type="text"
             id="username"
             value={username}
@@ -78,8 +88,13 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="phone-number">전화번호</label>
+          <label className="phone-number" htmlFor="phone-number">
+            전화번호
+          </label>
+        </div>
+        <div>
           <input
+            className="phoneput"
             type="text"
             id="phone-number"
             value={phoneNumber}
@@ -87,8 +102,13 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">비밀번호</label>
+          <label className="password" htmlFor="password">
+            비밀번호
+          </label>
+        </div>
+        <div>
           <input
+            className="passwordput"
             type="password"
             id="password"
             value={password}
@@ -96,8 +116,13 @@ const Signup = () => {
           />
         </div>
         <div>
-          <label htmlFor="confirm-password">비밀번호 확인</label>
+          <label className="confirm-password" htmlFor="confirm-password">
+            비밀번호 확인
+          </label>
+        </div>
+        <div>
           <input
+            className="passwordfirmput"
             type="password"
             id="confirm-password"
             value={confirmPassword}
@@ -106,7 +131,7 @@ const Signup = () => {
         </div>
 
         <div className="role-selection">
-          <label>성별</label>
+          <label className="gender">성별</label>
           <div>
             <input
               type="radio"
@@ -115,7 +140,9 @@ const Signup = () => {
               checked={role === "user"}
               onChange={() => setRole("user")}
             />
-            <label htmlFor="customer">남자</label>
+            <label className="man" htmlFor="customer">
+              남자
+            </label>
           </div>
           <div>
             <input
@@ -123,14 +150,16 @@ const Signup = () => {
               id="woman"
               value="user"
               checked={role === "user"}
-              onChange={() => setRole("user")}
+              onChange={() => setRole("women")}
             />
-            <label htmlFor="seller">여자</label>
+            <label className="women" htmlFor="seller">
+              여자
+            </label>
           </div>
         </div>
 
-        <button id="signup-button" onClick={handleSignup}>
-          회원가입
+        <button className="check" id="signup-button" onClick={handleSignup}>
+          확인
         </button>
 
         <p className="login-link">

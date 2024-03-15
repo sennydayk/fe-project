@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Theme from "../styles/Theme";
+import Theme from "./styles/Theme";
 
 import kakao from "../logo/kakao.png";
 import kbpay from "../logo/kbpay.png";

@@ -4,7 +4,6 @@ import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import Theme from "./styles/Theme";
 import Home from "./Home";
-import Mypage from "./components/Mypage";
 import Menu from "./components/Menu";
 import RoomDetailPage from './pages/RoomDetail/RoomDetailPage';
 
@@ -19,7 +18,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from './components/action'
 import Hotellist from './components/hotellist';
-import Filter from './components/filter';
+import Info from "./pages/MyPage/Info";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Login/Signup";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,7 +47,9 @@ function App() {
         <Router>
           <div className="App">
             <Routes>
-              <Route path="/Mypage" element={<Mypage />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/Mypage" element={<Info />} />
               <Route path="/Menu" element={<Menu />} />
               <Route path="/Home" element={<Home />} />
               <Route path="/" element={<Navigate replace to="/home" />} />

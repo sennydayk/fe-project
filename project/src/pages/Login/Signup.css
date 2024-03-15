@@ -1,0 +1,139 @@
+.signup-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 20px;
+
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  background-color: white;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.infomation {
+  font-size: 25px;
+}
+
+.info {
+  font-size: 15px;
+}
+
+.email {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.username {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.phone-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.password {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.confirm-password {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.gender {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.man {
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.women {
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.nameput {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e0e0;
+  width: 90%;
+}
+
+.emailput {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e0e0;
+  width: 90%;
+}
+
+.phoneput {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e0e0;
+  width: 90%;
+}
+
+.passwordput {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e0e0;
+  width: 90%;
+}
+
+.passwordfirmput {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e0e0;
+  width: 90%;
+}
+
+.check {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e0e0;
+  width: 97%;
+}
+
+.login-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: #262626;
+}
