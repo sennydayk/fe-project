@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Theme from "./styles/Theme";
 
-import kakao from "../logo/kakao.png";
-import kbpay from "../logo/kbpay.png";
-import npay2 from "../logo/npay2.png";
-import payco from "../logo/payco.png";
-import tosspay from "../logo/tosspay.png";
+import kakao from "./logo/kakao.png";
+import kbpay from "./logo/kbpay.png";
+import npay2 from "./logo/npay2.png";
+import payco from "./logo/payco.png";
+import tosspay from "./logo/tosspay.png";
 
 function PaymentsMethod(props) {
   const Wrapper = styled.div`

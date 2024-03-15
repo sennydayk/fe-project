@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Theme from "./styles/Theme";
 
 function PaymentsInfo() {
   const Wrapper = styled.div`
@@ -43,9 +42,6 @@ function PaymentsInfo() {
     font-weight: bold;
     background-color: ${(props) => props.theme.blue};
     color: white;
-    display: flex;
-    align-item: center;
-    justify-content: center;
   `;
 
   return (
@@ -61,13 +57,14 @@ function PaymentsInfo() {
 }
 
 function Terms() {
+
   const A = styled.a`
     font-size: ${(props) => props.theme.fontSize_md};
     color: ${(props) => props.theme.black};
-  `;
+    `;
+
 
   const [termsBoolean, setTermsBoolean] = useState(false);
-
   const showTerms = (prev) => {
     setTermsBoolean(!termsBoolean);
     console.log(termsBoolean);

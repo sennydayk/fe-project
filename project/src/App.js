@@ -1,4 +1,3 @@
-
 import "./App.css";
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
@@ -21,6 +20,9 @@ import Hotellist from './components/hotellist';
 import Info from "./pages/MyPage/Info";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Login/Signup";
+import Reservation from "./pages/Reservation/Reservation";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +48,7 @@ function App() {
       <ThemeProvider theme={Theme}>
         <Router>
           <div className="App">
+            <Header />
             <Routes>
               <Route path="/Signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
@@ -53,9 +56,11 @@ function App() {
               <Route path="/Menu" element={<Menu />} />
               <Route path="/Home" element={<Home />} />
               <Route path="/" element={<Navigate replace to="/home" />} />
-              <Route path="/detail" element={<Hotellist />} />
-              <Route path="/detail_room" element={<RoomDetailPage />} />
+              <Route path="/Detail" element={<Hotellist />} />
+              <Route path="/Detail_room" element={<RoomDetailPage />} />
+              <Route path="/Reservation" element={<Reservation />} />
             </Routes>
+            <Footer />
           </div>
         </Router>{" "}
       </ThemeProvider>

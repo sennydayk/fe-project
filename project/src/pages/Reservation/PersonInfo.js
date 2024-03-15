@@ -1,36 +1,34 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Theme from "./styles/Theme";
 
-function PersonInfo(props) {
-  const Wrapper = styled.div`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     line-height: 4em;
     margin: 20px;
   `;
 
-  const H1 = styled.h1`
+const H1 = styled.h1`
     font-size: ${(props) => props.theme.fontSize_xxl};
     font-weight: bold;
   `;
-  const H4 = styled.h4`
+const H4 = styled.h4`
     font-size: ${(props) => props.theme.fontSize_xl};
     font-weight: bold;
   `;
-  const P = styled.p`
+const P = styled.p`
     font-size: ${(props) => props.theme.fontSize_md};
     color: #888888;
   `;
 
-  const Input = styled.input`
+const Input = styled.input`
     background-color: ${(props) => props.theme.inputColor};
     width: 300px;
     height: 70px;
     border-radius: 8px;
     font-size: ${(props) => props.theme.fontSize_lg};
   `;
-  const Button = styled.button`
+const Button = styled.button`
     width: 150px;
     height: 50px;
     margin: 20px;
@@ -45,6 +43,9 @@ function PersonInfo(props) {
     border-color: lightgrey;
   `;
 
+
+
+function PersonInfo(props) {
   const [modalBoolean, setModalBoolean] = useState(false);
   const showModal = () => {
     const username = document.getElementById("username").value;

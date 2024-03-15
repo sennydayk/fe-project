@@ -8,8 +8,9 @@ export const HeaderStyle = styled.div`
 `;
 
 export const HeaderWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  padding: 0 160px;
   justify-content: space-between;
 `;
 
