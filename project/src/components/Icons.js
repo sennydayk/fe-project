@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Logo = styled.img`
   width: 100px;
   height: 23px;
-  margin: 25px;
+  margin: 25px 25px 22px 25px;
 `;
 
 const Menu = styled.img`
@@ -19,7 +19,7 @@ const Profile = styled.img`
   width: 30px;
   height: auto;
 
-  padding: 8px 4px 8px 4px;
+  padding: 8px 4px 6px 4px;
 `;
 export const LogoIcon = () => <Logo src={로고} alt="로고" />;
 export const MenuIcon = () => <Menu src={메뉴} alt="메뉴" />;

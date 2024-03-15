@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Theme from "../styles/Theme";
-import hotel from "../img/호텔.jpeg";
+import hotel from "../img/hotelImg.png";
 
 function AccomodationInfo() {
   const Wrapper = styled.div`
