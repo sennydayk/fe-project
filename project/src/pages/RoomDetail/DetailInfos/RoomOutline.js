@@ -69,7 +69,7 @@ const RoomOutline = ({ id }) => {
             </S.ReviewSlider>
           </div>
         </S.OutlineReview>
-      </S.OutlineContainer>
+      </S.OutlineContainer >
     </>
   );
 };

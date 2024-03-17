@@ -10,7 +10,7 @@ const Review = ({ id }) => {
   );
 };
 
-const ReviewContainer = styled.div`
-  height: 800px;
+const ReviewContainer = styled.article`
+  height: 500px;
 `;
 export default Review;

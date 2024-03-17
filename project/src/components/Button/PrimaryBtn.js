@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from 'antd';
 
-const PrimaryBtn = ({ text }) => {
+const PrimaryBtn = ({ text, onClick }) => {
+
   return (
-    <Button type="primary">{text}</Button>
+    <Button type="primary" onClick={onClick}>{text}</Button>
   );
 };
 

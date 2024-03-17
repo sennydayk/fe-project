@@ -6,7 +6,7 @@ import CopyBtn from '../../components/Button/CopyBtn';
 
 const Location = ({ id }) => {
   return (
-    <section id={id}>
+    <article id={id}>
       <SectionHeader sectionTitle="위치" />
       <S.LocationInfos>
         <Map width={1200} height={400} />
@@ -22,7 +22,7 @@ const Location = ({ id }) => {
           </ul>
         </S.LocationText>
       </S.LocationInfos>
-    </section>
+    </article>
   );
 };
 

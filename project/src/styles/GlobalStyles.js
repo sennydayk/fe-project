@@ -15,9 +15,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
   }
-
+  
   body {
     font-family: 'Pretendard-Regular';
+    color: #333;
   }
 
   input {
@@ -27,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: #333;
   }
 
   ol, ul, li {
@@ -37,6 +39,6 @@ const GlobalStyles = createGlobalStyle`
     border-style: none;
     cursor: pointer;
   }`
-;
+  ;
 
 export default GlobalStyles;

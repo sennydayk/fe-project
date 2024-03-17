@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./hotellist.css";
 import { fetchData } from "./action";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Hotellist = () => {
   const dispatch = useDispatch();
@@ -40,10 +40,10 @@ const Hotellist = () => {
     return `${roundedPrice.toLocaleString()}`; // 숫자를 문자열로 변환하고 "원"을 추가하여 반환
   };
 
-  const navigate = useNavigate();
-  const roomDetailClick = (address) => {
-    navigate(`/detail_room`);
-  };
+  // const navigate = useNavigate();
+  // const roomDetailClick = () => {
+  //   navigate(`/detail_room`);
+  // };
   return (
     <>
       <div className="container">
@@ -112,42 +112,43 @@ const Hotellist = () => {
             (item) =>
               // 사진이 있는 경우에만 호텔 정보 출력
               item.firstimage && (
-                <div
-                  key={item.id}
-                  className="hotelitem"
-                  onClick={roomDetailClick}
-                >
-                  <img
-                    className="hotelimage"
-                    src={item.firstimage}
-                    alt={item.title}
-                  />
-                  <div className="hotelinfo">
-                    <div
-                      style={{
-                        fontSize: "22px",
-                        fontWeight: "600",
-                        paddingBottom: "10px",
-                      }}
-                    >
-                      {item.title}
-                    </div>
-                    <div>{item.addr1}</div>
-                    <div>{item.addr2}</div>
-                    {/* 랜덤 가격을 표시 */}
-                    <div
-                      style={{
-                        fontSize: "25px",
-                        fontWeight: "600",
-                        marginTop: "120px",
-                      }}
-                    >
-                      {generateRandomPrice()}원
+                <Link key={item.id} to={`/Detail_room/${item.title}`}>
+                  <div
+                    className="hotelitem"
+                  >
+                    <img
+                      className="hotelimage"
+                      src={item.firstimage}
+                      alt={item.title}
+                    />
+                    <div className="hotelinfo">
+                      <div
+                        style={{
+                          fontSize: "22px",
+                          fontWeight: "600",
+                          paddingBottom: "10px",
+                        }}
+                      >
+                        {item.title}
+                      </div>
+                      <div>{item.addr1}</div>
+                      <div>{item.addr2}</div>
+                      {/* 랜덤 가격을 표시 */}
+                      <div
+                        style={{
+                          fontSize: "25px",
+                          fontWeight: "600",
+                          marginTop: "120px",
+                        }}
+                      >
+                        {generateRandomPrice()}원
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               )
           )}
+
         </div>
       </div>
     </>

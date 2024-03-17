@@ -7,7 +7,8 @@ import PrimaryBtn from "../../../components/Button/PrimaryBtn";
 import { useNavigate } from "react-router-dom";
 
 const RoomType = ({ id }) => {
-  const navigate = useNavigate(); // Move useNavigate inside the functional component
+
+  const navigate = useNavigate();
 
   const NavigateToRes = () => {
     navigate("/reservation");
@@ -33,22 +34,7 @@ const RoomType = ({ id }) => {
               </div>
               <div>
                 <div className="price">113,600원</div>
-                <button
-                  style={{
-                    color: "white",
-                    backgroundColor: "#1677FF",
-                    fontSize: "15px",
-                    fontWeight: "500",
-                    paddingTop: "9px",
-                    paddingBottom: "8px",
-                    paddingLeft: "14px",
-                    paddingRight: "14px",
-                    borderRadius: "7px",
-                  }}
-                  onClick={NavigateToRes}
-                >
-                  객실예약
-                </button>
+                <PrimaryBtn text='객실 예약' onClick={NavigateToRes} />
               </div>
             </div>
             <div className="bottom_box box">
@@ -76,22 +62,7 @@ const RoomType = ({ id }) => {
               </div>
               <div>
                 <div className="price">113,600원</div>
-                <button
-                  style={{
-                    color: "white",
-                    backgroundColor: "#1677FF",
-                    fontSize: "15px",
-                    fontWeight: "500",
-                    paddingTop: "9px",
-                    paddingBottom: "8px",
-                    paddingLeft: "14px",
-                    paddingRight: "14px",
-                    borderRadius: "7px",
-                  }}
-                  onClick={NavigateToRes}
-                >
-                  객실예약
-                </button>
+                <PrimaryBtn text='객실 예약' onClick={NavigateToRes} />
               </div>
             </div>
             <div className="bottom_box box">

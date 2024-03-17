@@ -44,6 +44,6 @@ export const NavList = styled.li`
   }
 
   &:hover a {
-    color: blue;
+    color: ${(props) => (props.isClicked ? props.theme.blue : "blue")};
   }
 `;

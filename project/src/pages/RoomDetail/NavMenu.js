@@ -18,13 +18,21 @@ const NavMenu = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const visibleSection = navListItems.find(navListItem => {
+      let visibleSectionId = 'overview';
+
+      for (let i = navListItems.length - 1; i >= 0; i--) {
+        const navListItem = navListItems[i];
         const section = document.getElementById(navListItem.id);
-        if (!section) return false;
-        const { top, bottom } = section.getBoundingClientRect();
-        return top <= 0 && bottom > 0;
-      });
-      setActiveMenu(visibleSection ? visibleSection.id : 'overview');
+        if (section) {
+          const { top } = section.getBoundingClientRect();
+          if (top <= 100) {
+            visibleSectionId = navListItem.id;
+            break;
+          }
+        }
+      }
+
+      setActiveMenu(visibleSectionId);
       setIsFixed(scrollY > 0);
     };
 
@@ -38,9 +46,14 @@ const NavMenu = () => {
   const handleNavClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const navMenu = document.querySelector('.Nav');
+      const navMenuHeight = navMenu ? navMenu.offsetHeight : 0;
+      window.scrollTo({
+        top: section.offsetTop - navMenuHeight,
+        behavior: 'smooth'
+      });
     }
-    setIsFixed(true);
+
   };
 
   return (
