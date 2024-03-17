@@ -56,11 +56,7 @@
   border-radius: 8px;
   padding: 16px;
   margin-top: 8px;
-  background-color: #f9f9f9;
-  border: 1px solid #e2e0e0;
-}
-.inputWrap:focus-within {
-  border: 1px solid black;
+  background-color: #f4f4f4;
 }
 
 .input {
@@ -73,7 +69,8 @@
 }
 
 .input::placeholder {
-  color: #dadada;
+  color: gray;
+  background-color: none;
 }
 
 .bottomButton {

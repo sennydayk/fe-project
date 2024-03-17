@@ -5,20 +5,54 @@
   font-weight: normal;
   font-style: normal;
 }
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+  -webkit-text-fill-color: #000 !important; /* 글자 색상을 검정으로 설정 */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputWrap {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+
+  background-color: #f4f4f4;
+}
+.inputWrap:focus-within {
+  border: 1.5px solid rgb(255, 31, 31);
+  background-color: #e6e6e6;
+}
+
+.input {
+  width: 320px;
+  outline: none;
+  border: none;
+  height: 17px;
+  font-size: 14px;
+  font-weight: 400px;
+}
+
+.input::placeholder {
+  color: #9a9a9a;
+  background-color: none; /* 투명으로 설정 */
+}
 
 .page {
-  position: absolute;
-  top: 0;
-  bottom: 0;
   width: 100%;
-  max-width: 500px;
+  max-width: 1200px;
   padding: 0 20px;
 
-  left: 50%;
-  transform: translate(-50%, 0);
-
   background-color: white;
-
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -51,45 +85,21 @@
   color: #262626;
 }
 
-.inputWrap {
-  display: flex;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 8px;
-  background-color: #f9f9f9;
-  border: 1px solid #e2e0e0;
-}
-.inputWrap:focus-within {
-  border: 1px solid black;
-}
-
-.input {
-  width: 100%;
-  outline: none;
-  border: none;
-  height: 17px;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.input::placeholder {
-  color: #dadada;
-}
-
 .bottomButton {
-  width: 100%;
+  width: 350px;
   height: 50px;
   border: none;
   font-weight: bold;
   border-radius: 10px;
   background-color: #1273e4;
   color: #fafafa;
-  margin-bottom: 250px;
+  margin-bottom: 30px;
+  margin-top: 15px;
   cursor: pointer;
 }
 
 .bottomButton:disabled {
-  background-color: #fafafa;
+  background-color: #f4f4f4;
   color: gray;
 }
 

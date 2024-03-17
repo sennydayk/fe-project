@@ -126,7 +126,12 @@ function MainVisual() {
     // 검색 실행 함수
     navigate(`/detail?query=${encodeURIComponent(searchTerm)}`); // /detail 경로로 이동하면서 쿼리 파라미터 전달
   };
-
+  const handleKeyPress = (e) => {
+    // If the key pressed is Enter (key code 13), trigger the search
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
   const [activeButton2, setActiveButton2] = useState(1);
 
   const handleButtonClick2 = (buttonIndex) => {
@@ -154,8 +159,9 @@ function MainVisual() {
         <SearchInner>
           <SearchBar
             placeholder="여행지나 숙소를 검색해보세요"
-            value={searchTerm} // 입력 값과 상태 연결
-            onChange={(e) => setSearchTerm(e.target.value)} // 입력 값 변경 시 상태 업데이트
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyPress={handleKeyPress} // Call handleKeyPress when a key is pressed
           />
           <CalendarContainer>
             <Calendar />

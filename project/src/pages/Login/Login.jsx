@@ -1,109 +1,87 @@
-import React, { useEffect, useState } from "react";
-//import styled from "styled-components;";
+import React, { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
-
-const User = {
-  email: "test@example.com",
-  pw: "test2323@@@",
-};
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
+  const navigate = useNavigate();
 
-  const [emailValid, setEmailValid] = useState(false);
-  const [pwValid, setPwValid] = useState(false);
-  const [notAllow, setNotAllow] = useState(true);
-
-  useEffect(() => {
-    if (emailValid && pwValid) {
-      setNotAllow(false);
-      return;
-    }
-    setNotAllow(true);
-  }, [emailValid, pwValid]);
-
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-    const regex =
-      /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
-    if (regex.test(e.target.value)) {
-      setEmailValid(true);
-    } else {
-      setEmailValid(false);
-    }
-  };
-  const handlePw = (e) => {
-    setPw(e.target.value);
-    const regex =
-      /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
-    if (regex.test(e.target.value)) {
-      setPwValid(true);
-    } else {
-      setPwValid(false);
-    }
-  };
   const onClickConfirmButton = () => {
-    if (email === User.email && pw === User.pw) {
-      alert("로그인에 성공했습니다.");
-    } else {
-      alert("등록되지 않은 회원입니다.");
-    }
+    alert("로그인 되었습니다.");
+    navigate("/home");
+  };
+
+  const navigateToSignup = () => {
+    navigate("/signup");
+  };
+
+  // 이메일과 비밀번호 입력값이 비어있지 않은지 확인하는 함수
+  const isInputValid = () => {
+    return email.trim() !== "" && pw.trim() !== "";
   };
 
   return (
-    <div className="page">
-      <div className="title"> 여기 어때 </div>
-      <div className="titleWrap">이메일로 시작하기</div>
-      <div className="contentWrap">
-        <div className="inputTitle">이메일</div>
-        <div className="inputWrap">
-          <input
-            className="input"
-            type="text"
-            placeholder="abc@gccompany.co.kr"
-            value={email}
-            onChange={handleEmail}
-          />
+    <div className="container">
+      <div className="page">
+        <div className="titleWrap">이메일로 시작하기</div>
+        <div className="contentWrap" style={{ marginBottom: "30px" }}>
+          <div className="inputTitle">이메일</div>
+          <div className="inputWrap">
+            <input
+              className="input"
+              type="text"
+              placeholder="abc@gccompany.co.kr"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div style={{ marginTop: "26px" }} className="inputTitle">
+            비밀번호
+          </div>
+          <div className="inputWrap">
+            <input
+              className="input"
+              type="password"
+              placeholder="비밀번호를 입력하세요"
+              value={pw}
+              onChange={(e) => setPw(e.target.value)}
+            />
+          </div>
         </div>
-        <div className="errorMessageWrap">
-          {!emailValid && email.length > 0 && (
-            <div>일치하는 회원번호가 없습니다.</div>
-          )}
-        </div>
-
-        <div style={{ marginTop: "26px" }} className="inputTitle">
-          비밀번호
-        </div>
-        <div className="inputWrap">
-          <input
-            className="input"
-            type="password"
-            placeholder="비밀번호를 입력하세요"
-            value={pw}
-            onChange={handlePw}
-          />
-        </div>
-        <div className="errorMessageWrap">
-          {!pwValid && pw.length > 0 && (
-            <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
-          )}
+        <div>
+          <button
+            onClick={onClickConfirmButton}
+            className="bottomButton"
+            disabled={!isInputValid()} // 입력값이 비어있으면 버튼 비활성화
+          >
+            로그인
+          </button>
+          <div
+            style={{
+              fontSize: "15px",
+              display: "flex",
+              justifyContent: "center",
+              color: "gray",
+            }}
+          >
+            계정이 없으신가요?
+          </div>
+          <div
+            onClick={navigateToSignup}
+            style={{
+              cursor: "pointer",
+              marginTop: "15px",
+              fontSize: "17px",
+              display: "flex",
+              justifyContent: "center",
+              fontWeight: "600",
+            }}
+          >
+            이메일로 회원가입
+          </div>
         </div>
       </div>
-      <div>
-        <button
-          onClick={onClickConfirmButton}
-          disabled={notAllow}
-          className="bottomButton"
-        >
-          로그인
-        </button>
-      </div>
-      <button className="memderButton">
-        <Link to="/signup">회원가입</Link>
-      </button>
-      ;
     </div>
   );
 }

@@ -58,7 +58,7 @@ function Header() {
             </button>
             <button
               style={{ padding: "0", border: "none", background: "none" }}
-              onClick={() => navigate("/Mypage")}
+              onClick={() => navigate("/Login")}
             >
               <ProfileIcon />
             </button>

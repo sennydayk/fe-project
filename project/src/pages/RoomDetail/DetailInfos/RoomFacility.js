@@ -1,14 +1,14 @@
-import React from 'react';
-import * as S from '../styles/RoomFacilityStyle';
-import SectionHeader from '../SectionHeader';
-import MoreBtn from '../../../components/Button/MoreBtn';
+import React from "react";
+import * as S from "../styles/RoomFacilityStyle";
+import SectionHeader from "../SectionHeader";
+import MoreBtn from "../../../components/Button/MoreBtn";
 
 const RoomFacility = ({ id }) => {
   return (
     <S.FacilityContainer id={id}>
       <S.FacilityTitleWrap>
         <SectionHeader sectionTitle="서비스 및 부대시설" />
-        <MoreBtn buttonText='더보기' />
+        <MoreBtn buttonText="더보기" />
       </S.FacilityTitleWrap>
       <S.FacilityWrap>
         <ul>

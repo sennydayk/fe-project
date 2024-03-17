@@ -2,48 +2,46 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    line-height: 4em;
-    margin: 20px;
-  `;
+  display: flex;
+  flex-direction: column;
+  line-height: 4em;
+  margin: 20px;
+`;
 
 const H1 = styled.h1`
-    font-size: ${(props) => props.theme.fontSize_xxl};
-    font-weight: bold;
-  `;
+  font-size: ${(props) => props.theme.fontSize_xxl};
+  font-weight: bold;
+`;
 const H4 = styled.h4`
-    font-size: ${(props) => props.theme.fontSize_xl};
-    font-weight: bold;
-  `;
+  font-size: ${(props) => props.theme.fontSize_xl};
+  font-weight: bold;
+`;
 const P = styled.p`
-    font-size: ${(props) => props.theme.fontSize_md};
-    color: #888888;
-  `;
+  font-size: ${(props) => props.theme.fontSize_md};
+  color: #888888;
+`;
 
 const Input = styled.input`
-    background-color: ${(props) => props.theme.inputColor};
-    width: 300px;
-    height: 70px;
-    border-radius: 8px;
-    font-size: ${(props) => props.theme.fontSize_lg};
-  `;
+  background-color: ${(props) => props.theme.inputColor};
+  width: 300px;
+  height: 70px;
+  border-radius: 8px;
+  font-size: ${(props) => props.theme.fontSize_lg};
+`;
 const Button = styled.button`
-    width: 150px;
-    height: 50px;
-    margin: 20px;
-    padding-bottom: 65px;
-    border-style: none;
-    border-radius: 10px;
-    font-size: ${(props) => props.theme.fontSize_lg};
-    font-weight: bold;
-    background-color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color: lightgrey;
-  `;
-
-
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  padding-bottom: 70px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: ${(props) => props.theme.fontSize_lg};
+  font-weight: bold;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+`;
 
 function PersonInfo(props) {
   const [modalBoolean, setModalBoolean] = useState(false);
@@ -103,7 +101,8 @@ function CertificationNumModal({ setModalBoolean }) {
     width: 50px;
     height: 30px;
     background-color: ${(props) => props.theme.blue};
-    color: ${(props) => props.theme.white};
+    color: white;
+    font-size: 17px;
     border: none;
     border-radius: 3px;
     text-align: center;
