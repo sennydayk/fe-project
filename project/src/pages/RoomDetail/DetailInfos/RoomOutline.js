@@ -3,7 +3,7 @@ import * as S from '../styles/DetailInfosStyle';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const RoomOutline = ({ id }) => {
+const RoomOutline = ({ id, params }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -17,7 +17,7 @@ const RoomOutline = ({ id }) => {
       <S.OutlineContainer id={id}>
         <S.OutlineTitle>
           <div className='room_theme'>펜션</div>
-          <h1 className='room_name'>강릉 경포 오션힐펜션</h1>
+          <h1 className='room_name'>{params.hotelId}</h1>
         </S.OutlineTitle>
 
         <S.OutlineReview>

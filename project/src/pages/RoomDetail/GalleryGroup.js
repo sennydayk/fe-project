@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import roomImg from '../../images/roomImg.webp';
 
-const GalleryGroup = () => {
+const GalleryGroup = ({ linkLocation }) => {
   return (
     <ImgContainer>
       <ImageLists>
         <ImageList className='big_image'>
-          <ImgItem src={roomImg} alt='객실사진' />
+          <ImgItem src={linkLocation.state.img} alt='객실사진' />
         </ImageList>
         <ImageList className='small_image'>
-          <ImgItem src={roomImg} alt='객실사진' />
+          <ImgItem src={linkLocation.state.img} alt='객실사진' />
         </ImageList>
       </ImageLists>
     </ImgContainer>

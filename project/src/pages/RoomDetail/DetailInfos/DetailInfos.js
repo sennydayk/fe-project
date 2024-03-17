@@ -5,10 +5,10 @@ import RoomFacility from './RoomFacility';
 import RoomType from './RoomType';
 import RoomInfo from './RoomInfo';
 
-const DetailInfos = () => {
+const DetailInfos = ({ params }) => {
   return (
     <DetailInfosWrap>
-      <RoomOutline id='overview' />
+      <RoomOutline id='overview' params={params} />
       <RoomFacility id='facilities' />
       <RoomType id='rooms' />
       <RoomInfo />

@@ -8,8 +8,7 @@ const NavMenu = () => {
     { id: 'overview', title: '개요' },
     { id: 'facilities', title: '서비스 및 부대시설' },
     { id: 'rooms', title: '객실' },
-    { id: 'location', title: '위치' },
-    { id: 'reviews', title: '리뷰' }
+    { id: 'location', title: '위치' }
   ], []);
 
   const [isFixed, setIsFixed] = useState(false);
@@ -43,7 +42,8 @@ const NavMenu = () => {
     };
   }, [navListItems]);
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (id, event) => {
+    event.preventDefault();
     const section = document.getElementById(id);
     if (section) {
       const navMenu = document.querySelector('.Nav');
@@ -67,7 +67,7 @@ const NavMenu = () => {
             >
               <a
                 href={`#${navListItem.id}`}
-                onClick={() => handleNavClick(navListItem.id)}
+                onClick={(event) => handleNavClick(navListItem.id, event)}
               >
                 {navListItem.title}
               </a>

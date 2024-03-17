@@ -3,16 +3,22 @@ import styled from 'styled-components';
 import GalleryGroup from './GalleryGroup';
 import RoomDetailInfos from './RoomDetailInfos';
 import Location from './Location';
-import Review from './Review';
+import { useLocation, useParams } from 'react-router-dom';
 
 const RoomDetailMain = () => {
+  const params = useParams();
+  const linkLocation = useLocation();
+
+  if (!linkLocation || !linkLocation.state || !linkLocation.state.img) {
+    return null;
+  }
+
   return (
     <Main>
       <div>
-        <GalleryGroup />
-        <RoomDetailInfos />
-        <Location id='location' />
-        <Review id='reviews' />
+        <GalleryGroup linkLocation={linkLocation} />
+        <RoomDetailInfos params={params} linkLocation={linkLocation} />
+        <Location id='location' linkLocation={linkLocation} />
       </div>
     </Main >
   );

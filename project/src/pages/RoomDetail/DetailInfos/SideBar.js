@@ -10,7 +10,7 @@ import MoreBtn from '../../../components/Button/MoreBtn';
 import CopyBtn from '../../../components/Button/CopyBtn';
 
 
-const SideBar = () => {
+const SideBar = ({ linkLocation }) => {
   const [adSliderInit, SetAdSliderInit] = useState(false);
 
   useEffect(() => {
@@ -28,9 +28,10 @@ const SideBar = () => {
   return (
     <S.SideBarWrap>
       <S.Location>
-        <Map width={350} height={136} />
+        <Map width={350} height={136} latitude={linkLocation.state.mapy}
+          longitude={linkLocation.state.mapx} />
         <div className='location_address'>
-          <p>강원 강릉시 안현동 222-21</p>
+          <p>{linkLocation.state.address}</p>
           <CopyBtn />
         </div>
       </S.Location>

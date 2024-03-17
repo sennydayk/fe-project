@@ -42,17 +42,15 @@ function App() {
           <div className="App">
             <Header />
             <Routes>
-              <Route path="/Signup" element={<Signup />} />
+              <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/Mypage" element={<Info />} />
-              <Route path="/Menu" element={<Menu />} />
-              <Route path="/Home" element={<Home />} />
+              <Route path="/mypage" element={<Info />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/" element={<Navigate replace to="/home" />} />
-              <Route path="/Detail" element={<Hotellist />} />
-              <Route path="/Detail_room/:hotelId" element={<RoomDetailPage />} />
-              <Route path="/Reservation" element={<Reservation />} />
-              <Route path="/Login" element={<Login />} />
-              <Route path="/Signup" element={<Signup />} />
+              <Route path="/detail" element={<Hotellist />} />
+              <Route path="/detail_room/:hotelId" element={<RoomDetailPage />} />
+              <Route path="/reservation" element={<Reservation />} />
             </Routes>
             <Footer />
           </div>

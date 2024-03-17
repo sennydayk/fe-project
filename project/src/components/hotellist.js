@@ -15,8 +15,10 @@ const Hotellist = () => {
   console.log("Search term:", searchTerm);
 
   useEffect(() => {
-    dispatch(fetchData());
-  }, [dispatch]);
+    if (!data1.length) {
+      dispatch(fetchData());
+    }
+  }, [data1, dispatch]);
 
   useEffect(() => {
     if (searchTerm) {
@@ -112,7 +114,16 @@ const Hotellist = () => {
             (item) =>
               // 사진이 있는 경우에만 호텔 정보 출력
               item.firstimage && (
-                <Link key={item.id} to={`/Detail_room/${item.title}`}>
+                <Link
+                  key={item.id}
+                  to={`/Detail_room/${item.title}`}
+                  state={{
+                    address: item.addr1,
+                    mapx: item.mapx,
+                    mapy: item.mapy,
+                    img: item.firstimage
+                  }}
+                >
                   <div
                     className="hotelitem"
                   >
@@ -150,7 +161,7 @@ const Hotellist = () => {
           )}
 
         </div>
-      </div>
+      </div >
     </>
   );
 };

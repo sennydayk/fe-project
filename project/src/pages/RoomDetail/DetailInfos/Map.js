@@ -11,26 +11,26 @@ const MapContainer = styled.div`
   border-radius: 12px;
 `;
 
-const Map = ({ width, height }) => {
+const Map = ({ width, height, latitude, longitude }) => {
 
   const container = useRef(null);
 
   useEffect(() => {
     const mapOptions = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
+      center: new kakao.maps.LatLng(latitude, longitude),
       level: 3
     };
 
     const map = new kakao.maps.Map(container.current, mapOptions);
 
-    const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+    const markerPosition = new kakao.maps.LatLng(latitude, longitude);
     const marker = new kakao.maps.Marker({
       position: markerPosition
     });
     marker.setMap(map);
 
 
-  }, []);
+  }, [latitude, longitude]);
 
   return (
     <MapContainer ref={container} width={width} height={height} />

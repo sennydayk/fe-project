@@ -3,11 +3,11 @@ import styled from "styled-components";
 import DetailInfos from './DetailInfos/DetailInfos';
 import SideBar from './DetailInfos/SideBar';
 
-const RoomDetailInfos = () => {
+const RoomDetailInfos = ({ params, linkLocation }) => {
   return (
     <Wrap>
-      <DetailInfos />
-      <SideBar width={350} height={136} />
+      <DetailInfos params={params} />
+      <SideBar width={350} height={136} linkLocation={linkLocation} />
     </Wrap>
   );
 };

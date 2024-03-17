@@ -18,7 +18,7 @@ export const fetchDataFailure = (error) => ({
   payload: error,
 });
 
-export const searchHotel = () => {};
+export const searchHotel = () => { };
 
 export const fetchData = () => {
   return async (dispatch) => {
@@ -31,7 +31,7 @@ export const fetchData = () => {
         throw new Error("Failed to fetch data");
       }
       const data1 = await response.json();
-      console.log("data1", data1);
+      // console.log("data1", data1);
       const data = await data1.response.body.items.item;
       dispatch(fetchDataSuccess(data));
     } catch (error) {
