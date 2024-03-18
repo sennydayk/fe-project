@@ -17,7 +17,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "./components/action";
 import Hotellist from "./components/hotellist";
-import Info from "./pages/MyPage/info";
+import Info from "./pages/MyPage/Info";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Login/Signup";
 import Reservation from "./pages/Reservation/Reservation";
@@ -49,7 +49,10 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/" element={<Navigate replace to="/home" />} />
               <Route path="/detail" element={<Hotellist />} />
-              <Route path="/detail_room/:hotelId" element={<RoomDetailPage />} />
+              <Route
+                path="/detail_room/:hotelId"
+                element={<RoomDetailPage />}
+              />
               <Route path="/reservation" element={<Reservation />} />
             </Routes>
             <Footer />
