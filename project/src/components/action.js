@@ -18,14 +18,14 @@ export const fetchDataFailure = (error) => ({
   payload: error,
 });
 
-export const searchHotel = () => { };
+export const searchHotel = () => {};
 
 export const fetchData = () => {
   return async (dispatch) => {
     dispatch(fetchDataRequest());
     try {
       const response = await fetch(
-        "http://apis.data.go.kr/B551011/KorService1/searchStay1?serviceKey=x2bXYHMeWutgCiIv7VKXZLAqluLh1OmRZLQTSr8EWz1df%2BfdJz7dri0V%2F2MV8sZ8hF0dNs%2BVDvUFIln2up4Arw%3D%3D&MobileOS=ETC&MobileApp=AppTest&_type=json&numOfRows=250"
+        "//apis.data.go.kr/B551011/KorService1/searchStay1?serviceKey=x2bXYHMeWutgCiIv7VKXZLAqluLh1OmRZLQTSr8EWz1df%2BfdJz7dri0V%2F2MV8sZ8hF0dNs%2BVDvUFIln2up4Arw%3D%3D&MobileOS=ETC&MobileApp=AppTest&_type=json&numOfRows=250"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data");
