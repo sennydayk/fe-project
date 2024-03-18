@@ -1,0 +1,135 @@
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px #f0f0f0 inset !important; /* 입력 필드 내부에 흰색 배경을 삽입 */
+  -webkit-text-fill-color: #000 !important; /* 글자 색상을 검정으로 설정 */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.infomation {
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.info {
+  font-size: 15px;
+  color: gray;
+  padding-bottom: 25px;
+}
+
+.email {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.username {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+.phone-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.password {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.confirm-password {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.gender {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.man {
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.women {
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+}
+.emailput,
+.nameput,
+.phoneput,
+.passwordput,
+.passwordfirmput {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #f8f8f8; /* 일반 상태 배경색 */
+  width: 400px;
+  outline: none;
+}
+.emailput::placeholder,
+.nameput::placeholder,
+.phoneput::placeholder,
+.passwordput::placeholder,
+.passwordfirmput::placeholder {
+  color: #aeaeae; /* 연한 회색으로 설정 */
+}
+
+.emailput:focus,
+.nameput:focus,
+.phoneput:focus,
+.passwordput:focus,
+.passwordfirmput:focus {
+  background-color: #e6e6e6; /* 포커스 상태 배경색 */
+  border: 1.5px solid rgb(255, 31, 31); /* 포커스 상태 테두리 색상 */
+}
+.check {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+  background-color: #eeeeee;
+  color: #aeaeae;
+  text-align: center;
+  width: 400px;
+}
+.check.active {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.login-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: #262626;
+}

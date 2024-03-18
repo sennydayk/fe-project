@@ -1,0 +1,72 @@
+/* RangePicker 컴포넌트의 스타일을 수정합니다. */
+.ant-picker {
+  display: flex;
+  outline: none !important;
+  border: none !important;
+  -webkit-appearance: none;
+}
+custom-range-picker {
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  height: 50px;
+  width: 205px;
+  outline: none;
+}
+custom-range-picker:active,
+custom-range-picker:hover,
+custom-range-picker:focus,
+custom-range-picker:after {
+  outline: none !important;
+  border: none !important;
+  -webkit-appearance: none;
+}
+
+.custom-range-picker:focus {
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+}
+.ant-picker:active,
+.ant-picker:hover,
+.ant-picker:focus,
+.ant-picker::after {
+  outline: none !important;
+  border: none !important;
+  -webkit-appearance: none;
+}
+.ant-picker-input > input {
+  font-size: 18px !important; /* 우선순위를 높이기 위해 !important 사용 */
+  font-family: "Pretendard-Regular" !important; /* 우선순위를 높이기 위해 !important 사용 */
+  font-weight: 600;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+/* 입력란을 오른쪽에 위치시킵니다. */
+.ant-picker-input {
+  order: 2;
+}
+
+/* 달력 이미지를 왼쪽에 위치시킵니다. */
+.ant-picker-picker {
+  order: 1;
+}
+
+/* 구분자의 위치를 달력 이미지 왼쪽에 조정합니다. */
+.ant-picker-range-separator {
+  order: 2;
+  margin: 0 8px; /* 여백을 조정할 크기로 변경 */
+}
+
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  border-radius: 100%; /* 동그라미 모양으로 변경 */
+}
+.ant-picker-range-separator {
+  height: 2px;
+  width: 7px;
+  background-color: #000; /* 배경색을 원하는 색으로 설정 */
+  margin: 0 5px 0 5px; /* divider의 좌우 여백을 조절 */
+}
+.ant-picker-clear {
+  display: none !important;
+}

@@ -1,0 +1,31 @@
+body {
+  overflow-x: hidden;
+}
+
+.slider {
+  position: relative;
+}
+/* 슬라이더 컨테이너의 너비를 조정 */
+.slider-container {
+  width: 100%; /* 또는 특정 픽셀 값으로 설정 */
+  max-width: 1200px; /* 최대 너비를 설정하여, 필요에 따라 조절 가능 */
+  margin: auto; /* 중앙 정렬 */
+}
+
+/* 이미지 스타일 조정 */
+.slider-container img {
+  width: auto; /* 이미지 원본 비율 유지 */
+  max-width: 100%; /* 컨테이너 너비에 맞게 조절 */
+  height: auto; /* 이미지 높이 자동 조절 */
+  border-radius: 15px;
+}
+
+/* 슬라이드의 패딩 조정 */
+.slick-slide {
+  padding-right: 10px; /* 오른쪽 패딩 조정 */
+}
+
+/* 슬라이더의 레이아웃 조정 */
+.slick-list {
+  margin: 0 -10px; /* 슬라이더의 좌우 마진을 조절하여 여백 조정 */
+}
