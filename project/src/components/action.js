@@ -25,7 +25,7 @@ export const fetchData = () => {
     dispatch(fetchDataRequest());
     try {
       const response = await fetch(
-        "//apis.data.go.kr/B551011/KorService1/searchStay1?serviceKey=x2bXYHMeWutgCiIv7VKXZLAqluLh1OmRZLQTSr8EWz1df%2BfdJz7dri0V%2F2MV8sZ8hF0dNs%2BVDvUFIln2up4Arw%3D%3D&MobileOS=ETC&MobileApp=AppTest&_type=json&numOfRows=250"
+        "https://apis.data.go.kr/B551011/KorService1/searchStay1?serviceKey=x2bXYHMeWutgCiIv7VKXZLAqluLh1OmRZLQTSr8EWz1df%2BfdJz7dri0V%2F2MV8sZ8hF0dNs%2BVDvUFIln2up4Arw%3D%3D&MobileOS=ETC&MobileApp=AppTest&_type=json&numOfRows=250"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data");
