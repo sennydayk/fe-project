@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "yg-jalnan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px #e6e6e6 inset !important;
+  -webkit-text-fill-color: #000 !important; /* 글자 색상을 검정으로 설정 */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputWrap {
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+
+  background-color: #f4f4f4;
+}
+.inputWrap:focus-within {
+  border: 1.5px solid rgb(255, 31, 31);
+  background-color: #e6e6e6;
+}
+
+.input {
+  width: 320px;
+  outline: none;
+  border: none;
+  height: 17px;
+  font-size: 14px;
+  font-weight: 400px;
+}
+
+.input::placeholder {
+  color: #9a9a9a;
+  background-color: none; /* 투명으로 설정 */
+}
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "yg-jalnan";
+  margin-top: 100px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff4752;
+  text-align: center;
+}
+
+.titleWrap {
+  margin-top: 87px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #262626;
+}
+
+.contentWrap {
+  margin-top: 26px;
+  flex: 1;
+}
+
+.inputTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.bottomButton {
+  width: 350px;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #1273e4;
+  color: #fafafa;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.bottomButton:disabled {
+  background-color: #f4f4f4;
+  color: gray;
+}
+
+.memderButton {
+  width: 15%;
+  height: 230px;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-family: "yg-jalnan";
+  position: fixed;
+}
+
+.errorMessageWrap {
+  margin-top: 8px;
+  color: #ef0000;
+  font-size: 12px;
+}
